@@ -22,11 +22,11 @@ class WalletConnectModule implements Web3WModule {
 
     this.walletConnectProvider = new EthereumProvider.default(config);
 
-    try {
-      await this.walletConnectProvider.enable();
-    } catch (e) {
-      await this.walletConnectProvider.request({method: 'eth_requestAccounts', params: []});
-    }
+    // try {
+    //   await this.walletConnectProvider.enable();
+    // } catch (e) {
+    await this.walletConnectProvider.request({method: 'eth_requestAccounts', params: []});
+    // }
 
     // TODO remove
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
