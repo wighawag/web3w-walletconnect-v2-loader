@@ -6,7 +6,7 @@ import {logs} from 'named-logs';
 const console = logs('web3w-walletconnect-v2:index');
 
 class WalletConnectModule implements Web3WModule {
-  public readonly id = 'walletconnect';
+  public readonly id = 'walletconnect-v2';
 
   private config: EthereumProviderOptions;
   private walletConnectProvider: IEthereumProvider | undefined; // TODO ?

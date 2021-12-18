@@ -11,7 +11,7 @@ import { logs } from 'named-logs';
 const console = logs('web3w-walletconnect-v2:index');
 class WalletConnectModule {
     constructor(config) {
-        this.id = 'walletconnect';
+        this.id = 'walletconnect-v2';
         this.config = config;
     }
     setup(config) {
