@@ -19,12 +19,11 @@ class WalletConnectModule {
             config = Object.assign(Object.assign({}, this.config), config);
             const EthereumProvider = yield import('@walletconnect/ethereum-provider');
             this.walletConnectProvider = new EthereumProvider.default(config);
-            try {
-                yield this.walletConnectProvider.enable();
-            }
-            catch (e) {
-                yield this.walletConnectProvider.request({ method: 'eth_requestAccounts', params: [] });
-            }
+            // try {
+            //   await this.walletConnectProvider.enable();
+            // } catch (e) {
+            yield this.walletConnectProvider.request({ method: 'eth_requestAccounts', params: [] });
+            // }
             // TODO remove
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             window.walletConnectProvider = this.walletConnectProvider;
