@@ -57,7 +57,7 @@ class WalletConnectModule implements Web3WModule {
   }
 }
 
-export class WalletConnectModuleLoader implements Web3WModuleLoader {
+export class WalletConnectV2ModuleLoader implements Web3WModuleLoader {
   public readonly id: string = 'walletconnect';
 
   private moduleConfig: EthereumProviderOptions;
