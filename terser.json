@@ -1,0 +1,5 @@
+{
+  "mangle": true,
+  "compress": true,
+  "sourceMap": true
+}

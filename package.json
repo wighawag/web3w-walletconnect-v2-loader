@@ -1,0 +1,57 @@
+{
+  "name": "web3w-walletconnect-v2-loader",
+  "version": "0.0.1",
+  "description": "Wallet Connect V2 module loader for web3w",
+  "type": "module",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "author": "Ronan Sandford",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh@github.com:wighawag/web3w-walletconnect-v2-loader.git"
+  },
+  "keywords": [
+    "web3w",
+    "web3",
+    "wallet",
+    "walletconnect",
+    "ethereum"
+  ],
+  "devDependencies": {
+    "@ethersproject/bignumber": "^5.1.1",
+    "@ethersproject/contracts": "^5.1.1",
+    "@ethersproject/providers": "^5.1.2",
+    "@types/node": "^15.3.0",
+    "@types/pino": "^7.0.5",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "@walletconnect/ethereum-provider": "^2.0.0-beta.21",
+    "@walletconnect/types": "^2.0.0-beta.21",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "npm-run-all": "^4.1.5",
+    "pino": "^7.5.1",
+    "prettier": "^2.3.0",
+    "rimraf": "^3.0.2",
+    "terser": "^5.7.0",
+    "terser-folder": "^2.0.0",
+    "typescript": "^4.2.4",
+    "web3w": "^0.3.0"
+  },
+  "scripts": {
+    "prepare": "node ./.setup.cjs && npm run lint && npm run build",
+    "dev": "tsc -w -p tsconfig.json",
+    "build:esm": "rimraf dist/esm && tsc -p tsconfig.json",
+    "build": "run-s build:esm",
+    "lint": "eslint src/**/*.{js,ts,tsx} --quiet --fix"
+  },
+  "dependencies": {
+    "named-logs": "^0.1.0"
+  }
+}
