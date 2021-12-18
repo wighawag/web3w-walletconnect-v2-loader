@@ -53,7 +53,7 @@ class WalletConnectModule {
 }
 export class WalletConnectV2ModuleLoader {
     constructor(config) {
-        this.id = 'walletconnect';
+        this.id = 'walletconnect-v2';
         this.moduleConfig = config;
     }
     load() {
